@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Life is Life</title>
+    <link rel="stylesheet" type="text/css" href="GameOfLifeCSS.css">
+</head>
+<body>
+<div id="leftBar">
+    <form id="wH">
+        <span class="header">Ширина</span>
+        <input type="text" id="width">
+        <span class="header">Высота</span>
+        <input type="text" id="height">
+    </form>
+    <form id="setFrequency">
+        <span class="header">Частота (в мс)</span>
+        <input type="text" id="freq">
+    </form>
+    <div id='generate' class='btn'>Сгенерировать новое поле</div>
+    <div id='clear' class='btn'>Очистить текущее поле</div>
+    <div id='pause' class='btn'>Остановка и корректировка</div>
+    <div id="start" class='btn'>Запуск симуляции</div>
+</div>
+<table id="field"></table>
+<script src="GameOfLifeJS.js"></script>
+</body>
+</html>

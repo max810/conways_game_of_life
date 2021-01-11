@@ -1,0 +1,42 @@
+span.header {
+    display: block;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#field {
+    display: inline-block;
+    margin: 5%;
+}
+
+td {
+    border: 1px solid black;
+    border-radius: 35%;
+    width: 20px;
+    height: 20px;
+}
+
+#leftBar {
+    display: inline-block;
+    border: 3px double black;
+    border-radius: 5%;
+    vertical-align: top;
+    padding: 0 1%;
+    width:12%;
+    min-width: 150px;
+}
+
+div.btn {
+    border: 3px double #062831;
+    background-color: rgba(115, 255, 154, 0.74);
+    margin: 10% auto;
+}
+
+div.btn:hover {
+    border: 3px solid #062831;
+    cursor: pointer;
+}
+
+
