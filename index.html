@@ -8,19 +8,19 @@
 <body>
 <div id="leftBar">
     <form id="wH">
-        <span class="header">Ширина</span>
-        <input type="text" id="width">
-        <span class="header">Высота</span>
-        <input type="text" id="height">
+        <span class="header">Width</span>
+        <input type="number" id="width" placeholder="20">
+        <span class="header">Height</span>
+        <input type="number" id="height" placeholder="20">
     </form>
     <form id="setFrequency">
-        <span class="header">Частота (в мс)</span>
-        <input type="text" id="freq">
+        <span class="header">Simulation frequence (ms)</span>
+        <input type="text" id="freq" placeholder="250">
     </form>
-    <div id='generate' class='btn'>Сгенерировать новое поле</div>
-    <div id='clear' class='btn'>Очистить текущее поле</div>
-    <div id='pause' class='btn'>Остановка и корректировка</div>
-    <div id="start" class='btn'>Запуск симуляции</div>
+    <div id='generate' class='btn'>Generate new field</div>
+    <div id='clear' class='btn'>Clear current field</div>
+    <div id='pause' class='btn'>Pause</div>
+    <div id="start" class='btn'>Start</div>
 </div>
 <table id="field"></table>
 <script src="GameOfLifeJS.js"></script>

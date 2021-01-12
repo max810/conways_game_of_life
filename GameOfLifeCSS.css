@@ -9,13 +9,13 @@ span.header {
 #field {
     display: inline-block;
     margin: 5%;
+    border-collapse: collapse;
 }
 
 td {
     border: 1px solid black;
-    border-radius: 35%;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
 }
 
 #leftBar {
@@ -25,7 +25,8 @@ td {
     vertical-align: top;
     padding: 0 1%;
     width:12%;
-    min-width: 150px;
+    min-width: 200px;
+    text-align: center;
 }
 
 div.btn {

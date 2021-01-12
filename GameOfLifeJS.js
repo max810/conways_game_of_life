@@ -3,16 +3,23 @@
  */
 var timerID;
 document.getElementById('generate').addEventListener('click', function () {
-    initializeGenerations();
+    if (!document.getElementById('width').value) {
+        document.getElementById('width').value = 20;
+    }
+    if (!document.getElementById('height').value) {
+        document.getElementById('height').value = 20;
+    }
+
     generateField();
-    document.getElementById('width').value = '';
-    document.getElementById('height').value = '';
 });
 document.getElementById('start').addEventListener('click', function () {
-    getElements();
+    createEmptyGenerations();
+    fillGenerationsFromMaskedElements();
+
     if (!document.getElementById('freq').value) {
         document.getElementById('freq').value = 250;
     }
+
     timerID = setInterval(function () {
         getNextGeneration();
     }, document.getElementById('freq').value);
@@ -30,9 +37,10 @@ document.getElementById('clear').addEventListener('click', function () {
 var generation1 = [];
 var generation2 = [];
 
-function initializeGenerations() {
+function createEmptyGenerations() {
     generation1.length = document.getElementById('height').value;
     generation2.length = document.getElementById('height').value;
+    console.log(generation1.length)
     for (var i = 0; i < generation1.length; i++) {
         generation1[i] = [];
         generation2[i] = [];
@@ -80,7 +88,7 @@ function generateField() {
     }
 }
 
-function getElements() {
+function fillGenerationsFromMaskedElements() {
     for (var i = 0; i < document.getElementsByTagName('tr').length; i++) {
         for (var j = 0; j < document.getElementsByTagName('tr')[i].children.length; j++) {
             if (document.getElementsByTagName('tr')[i].children[j].style.backgroundColor == 'black') {
@@ -122,7 +130,7 @@ function getNextGeneration() {
     }
     evolve();
     if (ifParadise(generation1, generation2)) {
-        alert('Эволюция достигла предела');
+        alert('Paradise reached!');
         clearInterval(timerID);
     }
     for (var a = 0; a < generation1.length; a++) {
